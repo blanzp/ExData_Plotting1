@@ -17,8 +17,7 @@ house.data$DateTime<-as.POSIXct(strptime(paste(as.character(house.data$Date),hou
 # Create line plot of Sub Metering Values
 png("plot3.png")
 with(house.data,{
-     plot(DateTime,Sub_metering_1,type="n",xlab=NA,ylab="Energy Sub Metering")
-     lines(DateTime,Sub_metering_1,col="black")
+     plot(DateTime,Sub_metering_1,type="l",col="black",xlab=NA,ylab="Energy Sub Metering")
      lines(DateTime,Sub_metering_2,col="red")
      lines(DateTime,Sub_metering_3,col="blue")
      legend("topright",cex=.5,c('Sub_metering_1','Sub_metering_2','Sub_metering_3'),lty=c(1,1),lwd=c(2.5,2.5),col=c("black","red","blue"))
